@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Amelia-Basic';
+    src: url('Amelia-Basic-Light.eot');
+    src: url('Amelia-Basic-Light.eot?#iefix') format('embedded-opentype'),
+        url('Amelia-Basic-Light.woff2') format('woff2'),
+        url('Amelia-Basic-Light.woff') format('woff'),
+        url('Amelia-Basic-Light.svg#Amelia-Basic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amelia-Basic';
+    src: url('Amelia-Basic.eot');
+    src: url('Amelia-Basic.eot?#iefix') format('embedded-opentype'),
+        url('Amelia-Basic.woff2') format('woff2'),
+        url('Amelia-Basic.woff') format('woff'),
+        url('Amelia-Basic.svg#Amelia-Basic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amelia-Basic';
+    src: url('Amelia-Basic-Bold.eot');
+    src: url('Amelia-Basic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Amelia-Basic-Bold.woff2') format('woff2'),
+        url('Amelia-Basic-Bold.woff') format('woff'),
+        url('Amelia-Basic-Bold.svg#Amelia-Basic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
