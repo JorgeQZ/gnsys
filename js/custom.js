@@ -17,4 +17,13 @@ $(function() {
         $('.menu').toggleClass('active');
         $('header').toggleClass('menu-activated');
     });
+
+    $('.button-item').click(function() {
+        if ($(this).hasClass('active')) {
+            return;
+        } else {
+            $('.button-item').toggleClass('active');
+            $('.about-us-tab').toggleClass('active');
+        }
+    });
 });
