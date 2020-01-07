@@ -226,6 +226,46 @@
 
 
 
+    <!-- Contacto -->
+    <div class="contact-container">
+        <div class="container">
+            <div class="column">
+                <div>
+                    <p>
+                        Somos los expertos que <br> lideran tu viaje digital.
+                    </p>
+                    <p>
+                        Prepárese para acelerar las <br> soluciones de la era digital <br> de su empresa.
+                    </p>
+                </div>
+            </div>
+            <div class="column" style="justify-content: flex-end;">
+                <div>
+                    <div class="form">
+                        <div class="form-control">
+                            <label for="">Nombre</label><br>
+                            <input type="text" value="text">
+                        </div>
+                        <div class="form-control">
+                            <label for="">Email</label><br>
+                            <input type="text" value="text">
+                        </div>
+                        <div class="form-control">
+                            <label for="">Mensaje</label><br>
+                            <textarea>Mensaje</textarea>
+                        </div>
+                        <div class="form-control-submit">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contacto -->
+
+
+
 </div>
 
 <script>
