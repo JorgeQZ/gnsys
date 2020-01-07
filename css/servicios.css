@@ -1,0 +1,195 @@
+.head {
+  height: 470px;
+  background: blue;
+}
+
+.contenedor-general-servicios .cont-slogan {
+  padding: 40px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.contenedor-general-servicios .cont-slogan p {
+  font-size: 20px;
+  font-family: 'Amelia-Basic';
+  text-align: center;
+  color: #313131;
+}
+
+.contenedor-general-servicios .cont-slider-servicios {
+  background-image: url(../img/services-bg.png);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item {
+  height: 260px;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item .item {
+  background: rgba(0, 153, 255, 0);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item .item:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item .item.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item .item img {
+  width: 45px;
+  margin-bottom: 30px;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item .item p {
+  font-size: 20px;
+  font-family: 'Amelia-Basic';
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav {
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav .owl-prev {
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav .owl-next {
+  right: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav button {
+  position: absolute;
+  height: 258px;
+  width: 35px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  outline: none;
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav button img {
+  width: 8px;
+}
+
+.contenedor-general-servicios .contenedor-servicio {
+  background-image: url(../img/fondo-servicio-cont.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 85px 0;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio {
+  display: none;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio.active {
+  display: block;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio p.tit {
+  font-size: 36px;
+  font-family: 'Amelia-Basic';
+  font-weight: bold;
+  color: #0099f3;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0 65px;
+  position: relative;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio p.tit::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 65px;
+  height: 4px;
+  background: #0099f3;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-img {
+  width: 46%;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-img img {
+  width: 100%;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc {
+  width: calc(56% - 100px);
+  padding: 50px;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc p {
+  font-size: 27px;
+  font-family: 'Amelia-Basic';
+  color: #313131;
+  margin: 0;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc ul, .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc ol {
+  list-style: none;
+}
+
+.contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc ul li, .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc ol li {
+  font-size: 27px;
+  font-family: 'Amelia-Basic';
+  color: #313131;
+  margin: 0;
+}
+/*# sourceMappingURL=servicios.css.map */
