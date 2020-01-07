@@ -1584,4 +1584,15 @@ body {
     width: 100%;
   }
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=generals.css.map */
+=======
+
+.head-1 {
+  font-size: 40px;
+}
+
+.thin {
+  font-weight: 300;
+}
+>>>>>>> 6cd8a62a3181a4d2827aa37794c49b1c24706be8
