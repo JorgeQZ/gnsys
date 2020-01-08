@@ -1,4 +1,13 @@
-<?php get_header() ?>
+<?php
+/**
+ * Template Name: Home
+ *
+ */
+?>
+
+<?php get_header(); 
+$ID = get_the_ID();
+?>
     <div class="hero-container">
         <?php echo do_shortcode('[rev_slider alias="inicio"]'); ?>
         <!-- Slider -->
@@ -251,7 +260,85 @@
                 </div>
             </div>
             <div class="column">
+                <div class="slider owl-carousel owl-theme">
 
+                    <?php 
+                    $rows = count(get_field('clientes', $ID));
+                    $i = 1;
+                    ?>
+                    <?php if( have_rows('clientes', $ID) ): ?>
+
+                    <?php while( have_rows('clientes', $ID) ): the_row(); 
+                        $logo = get_sub_field('logo');
+                    ?>
+                        <?php
+                        if($i == 1)
+                        {
+                        ?>
+                        <div class="item">
+                        <?php
+                        }
+                        ?>
+                        <div class="cont-img">
+                            <img src="<?php echo $logo ?>" alt="">
+                        </div>
+                        <?php
+                        if($i == 8)
+                        {
+                        ?>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    <?php
+                    if($i < 8) 
+                    $i++;
+                    else
+                    $i = 1 
+                    ?>    
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php
+                    if($i != 1)
+                    {
+                    ?>
+                    </div>
+                    <?php
+                    }
+                    ?>
+<!--
+                    <div class="item">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente2.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente3.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente4.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente5.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente6.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente7.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente8.png' ?>" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente9.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente2.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente3.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente4.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente5.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente6.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente7.png' ?>" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente8.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente9.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente2.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente3.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente4.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente5.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri().'/img/cliente6.png' ?>" alt="">
+                    </div>
+-->
+                </div>
             </div>
         </div>
     </div>
@@ -304,5 +391,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop:false,
+            margin:10,
+            nav:false,
+            items: 1
+        });
+    
+    </script>
     <!-- Contacto -->
     <?php get_footer(); ?>

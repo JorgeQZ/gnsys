@@ -976,16 +976,16 @@ body {
         align-items: center;
         padding: 50px 10.2%;
         .container {
-            font-size: 4.5rem;
+            font-size: 50px;
             line-height: 1.2;
             color: #26a8f5;
             position: relative;
             font-weight: 300;
             &:before {
                 content: "";
-                width: 5%;
+                width: 4%;
                 min-width: 30px;
-                height: 13px;
+                height: 8px;
                 background-color: #26a8f5;
                 position: absolute;
                 bottom: -30px;
@@ -1002,12 +1002,14 @@ body {
         justify-content: space-between;
         padding: 50px 10.2%;
         .container {
+            display: flex;
+            align-items: center;
             .column {
                 width: 50%;
                 display: block;
                 color: #0099f3;
                 p {
-                    font-size: 2.6rem;
+                    font-size: 28px;
                     font-weight: 300;
                 }
                 .subcontent {
@@ -1021,7 +1023,7 @@ body {
                             margin-right: 90px;
                             li {
                                 font-weight: 300;
-                                font-size: 2.1rem;
+                                font-size: 24px;
                                 list-style: none;
                                 position: relative;
                                 &:before {
@@ -1033,6 +1035,39 @@ body {
                                     position: absolute;
                                     left: -1.8rem;
                                     top: .35rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .slider{
+                    width: 70%;
+                    margin: 0 auto;
+                    .item{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        .cont-img{
+                            width: 50%;
+                            padding: 30px 0;
+                            img{
+                                height: 50px;
+                                width: auto;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                    .owl-dots{
+                        button{
+                            outline: none;
+                            span{
+                                border: 1px solid black;
+                                background: transparent;
+                            }
+                            &.active{
+                                span{
+                                    background: black;
                                 }
                             }
                         }
@@ -1436,4 +1471,47 @@ body {
             }
         }
     }
+
+    .about-us-container {
+        .container {
+            font-size: 70px;
+        }
+    }
+
+    .our-clients-container {
+        .container {
+            .column {
+                p {
+                    font-size: 42px;
+                }
+                .subcontent {
+                    .subcolumn {
+                        ul {
+                            li {
+                                font-size: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .our-clients-container {
+        .container {
+            .column {
+                .slider{
+                    .item{
+                        .cont-img{
+                            img{
+                                height: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
