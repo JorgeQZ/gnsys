@@ -29,17 +29,16 @@
     .about-us-tabs {
         position: relative;
         .buttons-container {
-            position: absolute;
             display: flex;
             background-color: #000;
-            right: 30px;
-            top: -100px;
+            // right: 30px;
+            // top: -50px;
             z-index: 1;
             box-shadow: -19px -8px 20px -5px rgba(0, 0, 0, 0.5);
             .button-item {
                 position: relative;
-                width: 200px;
-                height: 200px;
+                width: 50%;
+                height: 140px;
                 background-color: #0099ff;
                 display: flex;
                 align-items: center;
@@ -47,9 +46,9 @@
                 text-align: center;
                 cursor: pointer;
                 img {
-                    width: 80%;
-                    max-width: 120px;
-                    margin-top: 15px;
+                    width: 50%;
+                    // max-width: 120px;
+                    margin-top: 10px;
                 }
                 p {
                     color: white;
@@ -73,7 +72,7 @@
             }
         }
         .about-us-tab-content {
-            height: 90vh;
+            min-height: 65vh;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -83,7 +82,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 0 4rem;
+                padding: 2rem 1rem;
                 display: none;
                 &.active {
                     display: block;
@@ -94,9 +93,9 @@
                     color: #0099ff;
                 }
                 .content {
-                    width: 70%;
-                    font-size: 35px;
-                    line-height: 60px;
+                    width: 90%;
+                    font-size: 25px;
+                    line-height: 40px;
                     font-weight: 300;
                     padding: 0;
                     padding-left: 10px;
@@ -119,18 +118,16 @@
     }
     .about-us-experience-container {
         .row {
-            display: flex;
-            height: 50vh;
             .col {
-                height: 50vh;
+                min-height: 30vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 0px 70px;
+                padding: 30px;
                 background-position: center;
                 background-size: cover;
                 &:first-child {
-                    width: 30%;
+                    // width: 30%;
                     p {
                         text-align: center;
                         text-transform: uppercase;
@@ -140,7 +137,7 @@
                     }
                 }
                 &:last-child {
-                    width: 70%;
+                    // width: 70%;
                     p {
                         font-size: 22px;
                         color: #fff;

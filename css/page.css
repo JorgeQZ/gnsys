@@ -37,21 +37,18 @@
     position: relative;
   }
   .about-us-tabs .buttons-container {
-    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-color: #000;
-    right: 30px;
-    top: -100px;
     z-index: 1;
     -webkit-box-shadow: -19px -8px 20px -5px rgba(0, 0, 0, 0.5);
             box-shadow: -19px -8px 20px -5px rgba(0, 0, 0, 0.5);
   }
   .about-us-tabs .buttons-container .button-item {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 50%;
+    height: 140px;
     background-color: #0099ff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,9 +63,8 @@
     cursor: pointer;
   }
   .about-us-tabs .buttons-container .button-item img {
-    width: 80%;
-    max-width: 120px;
-    margin-top: 15px;
+    width: 50%;
+    margin-top: 10px;
   }
   .about-us-tabs .buttons-container .button-item p {
     color: white;
@@ -90,7 +86,7 @@
     background-color: #0099ff;
   }
   .about-us-tabs .about-us-tab-content {
-    height: 90vh;
+    min-height: 65vh;
     background-size: cover;
     background-position: center;
     display: -webkit-box;
@@ -113,7 +109,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 4rem;
+    padding: 2rem 1rem;
     display: none;
   }
   .about-us-tabs .about-us-tab-content .about-us-tab.active {
@@ -125,9 +121,9 @@
     color: #0099ff;
   }
   .about-us-tabs .about-us-tab-content .about-us-tab .content {
-    width: 70%;
-    font-size: 35px;
-    line-height: 60px;
+    width: 90%;
+    font-size: 25px;
+    line-height: 40px;
     font-weight: 300;
     padding: 0;
     padding-left: 10px;
@@ -145,14 +141,8 @@
     background-color: #0099ff;
     position: absolute;
   }
-  .about-us-experience-container .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 50vh;
-  }
   .about-us-experience-container .row .col {
-    height: 50vh;
+    min-height: 30vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -162,12 +152,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0px 70px;
+    padding: 30px;
     background-position: center;
     background-size: cover;
-  }
-  .about-us-experience-container .row .col:first-child {
-    width: 30%;
   }
   .about-us-experience-container .row .col:first-child p {
     text-align: center;
@@ -175,9 +162,6 @@
     font-weight: bold;
     font-size: 30px;
     color: #0099ff;
-  }
-  .about-us-experience-container .row .col:last-child {
-    width: 70%;
   }
   .about-us-experience-container .row .col:last-child p {
     font-size: 22px;
