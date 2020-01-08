@@ -1295,7 +1295,7 @@ body {
                 p {
                     font-weight: 300;
                     color: #434343;
-                    font-size: 4rem;
+                    font-size: 45px;
                     margin: 0;
                     margin-bottom: 45px;
                 }
@@ -1421,4 +1421,19 @@ body {
 
 .thin {
     font-weight: 300;
+}
+
+
+
+@media screen and (min-width: 1700px) {
+
+    .contact-container {
+        .container {
+            .column {
+                p {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
 }

@@ -5,7 +5,6 @@
 
 .contenedor-general-servicios .cont-slogan {
   padding: 40px 0;
-  width: 85%;
   margin: 0 auto;
 }
 
@@ -191,5 +190,57 @@
   font-family: 'Amelia-Basic';
   color: #313131;
   margin: 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contenedor-general-servicios .cont-slogan p {
+    font-size: 16px;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contenedor-general-servicios .cont-slogan p {
+    font-size: 16px;
+  }
+  .contenedor-general-servicios .cont-slogan p br {
+    display: none;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio p.tit {
+    padding: 0 10px;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-img {
+    width: 100%;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc {
+    width: 100%;
+    padding: 35px;
+  }
+  .contenedor-general-servicios .contenedor-servicio .item-servicio .cont-info-servicio .cont-desc p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-item {
+    height: 360px;
+  }
+  .contenedor-general-servicios .cont-slider-servicios .owl-carousel .owl-nav button {
+    height: 358px;
+  }
 }
 /*# sourceMappingURL=servicios.css.map */

@@ -8,7 +8,6 @@
 
     .cont-slogan{
         padding: 40px 0;
-        width: 85%;
         margin: 0 auto;
         p{
             font-size: 20px;
@@ -168,6 +167,110 @@
                             color: #313131;
                             margin: 0;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+
+    .contenedor-general-servicios{
+        .contenedor-servicio{
+            .item-servicio{
+                .cont-info-servicio{
+                    .cont-desc{
+                        p{
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .contenedor-general-servicios{
+        .cont-slogan{
+            p{
+                font-size: 16px;
+            }
+        }
+        .contenedor-servicio{
+            .item-servicio{
+                .cont-info-servicio{
+                    .cont-desc{
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 767px){
+
+    .contenedor-general-servicios{
+        .cont-slogan{
+            p{
+                font-size: 16px;
+                br{
+                    display: none;
+                }
+            }
+        }
+        .contenedor-servicio{
+            .item-servicio{
+                p.tit{
+                    padding: 0 10px;
+                }
+                .cont-info-servicio{
+                    flex-direction: column;
+                    .cont-img{
+                        width: 100%;
+                    }
+                    .cont-desc{
+                        width: 100%;
+                        padding: 35px;
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 1700px){
+
+    .contenedor-general-servicios{ 
+        .cont-slider-servicios{
+            .owl-carousel{
+                .owl-item{
+                    height: 360px;
+                }
+                .owl-nav{
+                    button{
+                        height: 358px;
                     }
                 }
             }

@@ -47,11 +47,11 @@
   margin: 0;
 }
 
-.contenedor-general-servidores {
+.contenedor-general-infraestructura .contenedor-general-servidores {
   padding: 45px 60px;
 }
 
-.contenedor-general-servidores p.tit {
+.contenedor-general-infraestructura .contenedor-general-servidores p.tit {
   font-size: 36px;
   font-family: 'Amelia-Basic';
   font-weight: bold;
@@ -61,7 +61,7 @@
   position: relative;
 }
 
-.contenedor-general-servidores p.tit::before {
+.contenedor-general-infraestructura .contenedor-general-servidores p.tit::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -70,7 +70,7 @@
   background: #0099f3;
 }
 
-.contenedor-general-servidores p.subtit {
+.contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
   font-size: 43px;
   font-family: 'Amelia-Basic';
   font-weight: 100;
@@ -78,7 +78,7 @@
   margin: 0;
 }
 
-.contenedor-general-servidores .cont-servidores {
+.contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,24 +92,24 @@
   margin-bottom: 25px;
 }
 
-.contenedor-general-servidores .cont-servidores img {
+.contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
   height: 85px;
   margin: 0 40px;
 }
 
-.contenedor-general-desc-servidores {
+.contenedor-general-infraestructura .contenedor-general-desc-servidores {
   padding: 20px 0;
   background-image: url("../img/fondo-servidores.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.contenedor-general-desc-servidores .cont-items {
+.contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items {
   width: 55%;
   margin: 0 auto;
 }
 
-.contenedor-general-desc-servidores .cont-items p {
+.contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p {
   font-size: 20px;
   font-family: 'Amelia-Basic';
   font-weight: 100;
@@ -120,15 +120,15 @@
   border-bottom: 1px solid white;
 }
 
-.contenedor-general-desc-servidores .cont-items p span {
+.contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p span {
   font-weight: bold;
 }
 
-.contenedor-general-desc-servidores .cont-items p:last-child {
+.contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p:last-child {
   border-bottom: 0;
 }
 
-.contenedor-general-info-servidores {
+.contenedor-general-infraestructura .contenedor-general-info-servidores {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,12 +139,12 @@
   background-position: center;
 }
 
-.contenedor-general-info-servidores .cont-servidor {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
   width: 50%;
   padding: 100px;
 }
 
-.contenedor-general-info-servidores .cont-servidor p.enc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
   font-size: 38px;
   font-family: 'Amelia-Basic';
   font-weight: bold;
@@ -154,7 +154,7 @@
   position: relative;
 }
 
-.contenedor-general-info-servidores .cont-servidor p.enc::before {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -163,7 +163,7 @@
   background: white;
 }
 
-.contenedor-general-info-servidores .cont-servidor p.tit {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit {
   font-size: 26px;
   font-family: 'Amelia-Basic';
   font-weight: bold;
@@ -173,7 +173,7 @@
   margin-bottom: 10px;
 }
 
-.contenedor-general-info-servidores .cont-servidor p.desc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
   font-size: 26px;
   font-family: 'Amelia-Basic';
   font-weight: 100;
@@ -182,34 +182,106 @@
   margin-bottom: 7px;
 }
 
-.contenedor-general-info-servidores .cont-servidor img {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor img {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
   display: block;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(1), .contenedor-general-info-servidores .cont-servidor:nth-child(4) {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4) {
   background: #0099f3;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(1) p.desc, .contenedor-general-info-servidores .cont-servidor:nth-child(4) p.desc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4) p.desc {
   padding-left: 15px;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc, .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc {
   color: #0099f3;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc::before, .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc::before {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc::before, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc::before {
   background: #0099f3;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(2) p.tit, .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.tit {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.tit {
   color: #0099f3;
 }
 
-.contenedor-general-info-servidores .cont-servidor:nth-child(2) p.desc, .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.desc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.desc {
   color: #313131;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contenedor-general-infraestructura .contenedor-logos .cont-info p {
+    font-size: 22px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
+    padding: 75px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
+    font-size: 30px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contenedor-general-infraestructura .contenedor-logos .cont-info p {
+    font-size: 18px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
+    padding: 50px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
+    font-size: 24px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contenedor-general-infraestructura .contenedor-logos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor-general-infraestructura .contenedor-logos .cont-logos {
+    width: 100%;
+  }
+  .contenedor-general-infraestructura .contenedor-logos .cont-info {
+    width: 100%;
+  }
+  .contenedor-general-infraestructura .contenedor-logos .cont-info p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
+    font-size: 22px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
+    height: 45px;
+    margin: 0 5px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
+    width: 100%;
+    padding: 50px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
+    font-size: 24px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=infraestructura.css.map */

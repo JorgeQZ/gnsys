@@ -1444,7 +1444,7 @@ body {
   .contact-container .container .column p {
     font-weight: 300;
     color: #434343;
-    font-size: 4rem;
+    font-size: 45px;
     margin: 0;
     margin-bottom: 45px;
   }
@@ -1584,9 +1584,6 @@ body {
     width: 100%;
   }
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=generals.css.map */
-=======
 
 .head-1 {
   font-size: 40px;
@@ -1595,4 +1592,10 @@ body {
 .thin {
   font-weight: 300;
 }
->>>>>>> 6cd8a62a3181a4d2827aa37794c49b1c24706be8
+
+@media screen and (min-width: 1700px) {
+  .contact-container .container .column p {
+    font-size: 50px;
+  }
+}
+/*# sourceMappingURL=generals.css.map */

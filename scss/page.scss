@@ -6,7 +6,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 7rem 5rem;
+    padding: 30px 4rem;
     .banner-title {
         color: white;
         position: relative;
@@ -14,11 +14,11 @@
         font-weight: bold;
         &:before {
             content: "";
-            height: 5px;
-            width: 60px;
+            width: 65px;
+            height: 4px;
             background-color: #0099ff;
             top: 90%;
-            left: 5px;
+            left: 0;
             position: absolute;
         }
     }
@@ -437,6 +437,48 @@
                     margin: 0;
                 }
             }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .banner {
+        height: 515px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .banner {
+        height: 615px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    .banner {
+        height: 415px;
+        .banner-title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .banner {
+        height: 315px;
+        padding: 20px 35px;
+        .banner-title {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner {
+        height: 415px;
+        padding: 20px 35px;
+        .banner-title {
+            font-size: 28px;
         }
     }
 }
