@@ -19,7 +19,7 @@
             width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="true"></iframe>
     </div>
     <div class="column" style="background-image: url(<?php echo get_template_directory_uri().'/img/contact-bg.jpg' ?>)">
-        <p class="head-1 thin">
+        <p class="head-1 thin" style="max-width: 400px">
             Prepárese para acelerar
             las soluciones de la era digital de su empresa.
         </p>
