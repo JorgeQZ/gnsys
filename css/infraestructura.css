@@ -4,9 +4,20 @@
 }
 
 .contenedor-general-infraestructura .contenedor-logos {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.contenedor-general-infraestructura .contenedor-logos img.dec {
+  position: absolute;
+  display: block;
+  right: 0;
+  width: 18%;
+  top: 25%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .contenedor-general-infraestructura .contenedor-logos .cont-logos {
@@ -14,7 +25,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-logos .cont-logos img {
-  width: 50%;
+  width: 40%;
   margin: 60px auto;
   display: block;
 }
@@ -52,7 +63,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-general-servidores p.tit {
-  font-size: 36px;
+  font-size: 35px;
   font-family: 'Amelia-Basic';
   font-weight: bold;
   color: #0099f3;
@@ -71,7 +82,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
-  font-size: 43px;
+  font-size: 45px;
   font-family: 'Amelia-Basic';
   font-weight: 100;
   color: #454545;
@@ -93,7 +104,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
-  height: 85px;
+  height: 80px;
   margin: 0 40px;
 }
 
@@ -110,7 +121,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Amelia-Basic';
   font-weight: 100;
   color: white;
@@ -145,7 +156,7 @@
 }
 
 .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
-  font-size: 38px;
+  font-size: 35px;
   font-family: 'Amelia-Basic';
   font-weight: bold;
   color: white;
@@ -217,26 +228,23 @@
   .contenedor-general-infraestructura .contenedor-logos .cont-info p {
     font-size: 22px;
   }
-  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
-    padding: 75px;
-  }
-  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
-    font-size: 30px;
-  }
-  .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
-    font-size: 22px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .contenedor-general-infraestructura .contenedor-logos .cont-info p {
     font-size: 18px;
   }
+  .contenedor-general-infraestructura .contenedor-general-servidores p.tit {
+    font-size: 25px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
+    font-size: 32px;
+  }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
     padding: 50px;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
-    font-size: 24px;
+    font-size: 25px;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
     font-size: 18px;
@@ -260,12 +268,21 @@
     font-size: 18px;
     margin: 20px 0;
   }
+  .contenedor-general-infraestructura .contenedor-general-servidores {
+    padding: 45px 30px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-servidores p.tit {
+    font-size: 25px;
+  }
   .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
-    font-size: 22px;
+    font-size: 32px;
   }
   .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
     height: 45px;
     margin: 0 5px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items {
+    width: 75%;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores {
     -webkit-box-orient: vertical;
@@ -278,7 +295,7 @@
     padding: 50px;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.enc {
-    font-size: 24px;
+    font-size: 25px;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor p.desc {
     font-size: 18px;

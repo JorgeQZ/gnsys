@@ -6,6 +6,43 @@
 ?>
 
 <?php get_header() ?>
+
+<style>
+.contact-page-container .column, .contact-page-container .column .grid, .contact-page-container .column .form, .banner .banner-title{    
+    opacity: 0;
+}
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.contact-page-container .column:last-child p, .contact-page-container .column .grid, .contact-page-container .column .form').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+	$j('.contact-page-container .column:first-child, .banner .banner-title').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contact-page-container .column:last-child').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+});
+
+</script>
+
 <div class="banner" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="banner-title">
         <?php the_title() ?>
@@ -41,6 +78,10 @@
                 <p><a href="mailto:+1 81 8347 7640">+1 81 8347 7640</a></p>
             </div>
         </div>
+        
+        <?php echo do_shortcode('[contact-form-7 id="91" title="Contacto"]'); ?>
+
+        <!--
         <div class="form">
             <div class="form-row">
                 <input type="text" name="Nombre" id="" placeholder="Nombre">
@@ -58,6 +99,7 @@
                 <input type="submit" value="Enviar">
             </div>
         </div>
+-->
     </div>
 </div>
 <?php get_footer() ?>

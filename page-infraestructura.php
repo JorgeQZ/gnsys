@@ -6,6 +6,67 @@
 ?>
 <?php get_header();?>
 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<style>
+.contenedor-general-infraestructura .contenedor-logos .cont-logos img, .contenedor-general-infraestructura .contenedor-logos .cont-info p, .contenedor-general-infraestructura .contenedor-general-servidores, .contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor, .contact-container .container .column, img.dec, .banner .banner-title{    
+    opacity: 0;
+}
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.contact-container .container .column:nth-child(1), .contact-container .container .column:nth-child(2)').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-general-infraestructura .contenedor-general-servidores, .contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items p').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+	$j('.contenedor-general-infraestructura .contenedor-logos .cont-logos img, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3), .banner .banner-title').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-general-infraestructura .contenedor-logos .cont-info p, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4)').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-general-infraestructura .contenedor-logos img.dec').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '60%',
+        triggerOnce: true
+    });
+
+    $j('.contact-container img.dec').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '60%',
+        triggerOnce: true
+    });
+
+});
+
+</script>
+
 <div class="banner" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="banner-title">
         <?php the_title() ?>
@@ -15,8 +76,10 @@
 
 <div class="contenedor-general-infraestructura">
 
-
     <div class="contenedor-logos">
+        <!-- data-100="bottom: 0%;" data-700="bottom: 70%;" -->
+        <img src="<?php echo get_template_directory_uri().'/img/flechas-der-azul.png'?>" alt="" class="dec">
+
 
         <div class="cont-logos">
             <img src="<?php echo get_template_directory_uri() . '/img/logo-ibm.png' ?>" alt="">
@@ -156,6 +219,7 @@
 
     <!-- Contacto -->
     <div class="contact-container">
+        <img class="dec" src="<?php echo get_template_directory_uri().'/img/lineas-der.png'?>" alt="" style="bottom: 70%;">
         <div class="container">
             <div class="column">
                 <div>
@@ -168,33 +232,12 @@
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">
-                <div>
-                    <div class="form">
-                        <div class="form-control">
-                            <label for="">Nombre</label><br>
-                            <input type="text" value="text">
-                        </div>
-                        <div class="form-control">
-                            <label for="">Email</label><br>
-                            <input type="text" value="text">
-                        </div>
-                        <div class="form-control">
-                            <label for="">Mensaje</label><br>
-                            <textarea>Mensaje</textarea>
-                        </div>
-                        <div class="form-control-submit">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </div>
-                </div>
+                <?php echo do_shortcode('[contact-form-7 id="90" title="Principal"]'); ?>
             </div>
         </div>
     </div>
     <!-- Contacto -->
 
-
-
 </div>
-
 
 <?php get_footer();?>

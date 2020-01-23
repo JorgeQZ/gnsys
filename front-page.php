@@ -7,12 +7,76 @@
 
 <?php get_header(); 
 $ID = get_the_ID();
+$seccion_1 = get_field('seccion_1');		
+$informacion_clientes = get_field('informacion_clientes');		
+$clientes_seccion_azul = get_field('clientes_seccion_azul');		
 ?>
+
+<style>
+
+.services-container .item, .services-container .enc, .hero-container .card-container, .about-us-container .container, .our-clients-container .container .column, .advisors-container .container, .contact-container .container .column, img.dec{
+    opacity: 0;
+}
+
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+	$j('.services-container .item, .services-container .enc, .hero-container .card-container').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.advisors-container .container').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.about-us-container img.dec, .contact-container img.dec').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '60%',
+        triggerOnce: true
+    });
+
+    $j('.our-clients-container img.dec').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '60%',
+        triggerOnce: true
+    });
+
+	$j('.about-us-container .container, .our-clients-container .container .column:nth-child(1), .contact-container .container .column:nth-child(1)').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.our-clients-container .container .column:nth-child(2), .contact-container .container .column:nth-child(2)').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+});
+
+</script>
+
+
+
     <div class="hero-container">
         <?php echo do_shortcode('[rev_slider alias="inicio"]'); ?>
         <!-- Slider -->
 
-        <!-- tarjeta -->
+        <!-- tarjeta 
         <div class="card-container">
             <div class="card">
                 <div class="title">Experiencia en <br> soluciones tecnológicas</div>
@@ -23,18 +87,20 @@ $ID = get_the_ID();
                 </div>
             </div>
         </div>
-        <!-- tarjeta -->
+        tarjeta -->
 
     </div>
     <!-- Hero -->
 
 
-    <!-- About us -->
+    <!-- About us data-200="bottom: 5%;" data-600="bottom: 70%;" -->
     <div class="about-us-container">
+
+        <img class="dec" src="<?php echo get_template_directory_uri().'/img/lineas-der.png'?>" alt="">
 
         <div class="container">
 
-            Convertimos tus <br> desafíos tecnologicos <br> y empresariales <br> <strong> en oportunidades <br> comerciales.</strong>
+            <?php echo $seccion_1['encabezado']; ?>
 
         </div>
     </div>
@@ -42,6 +108,53 @@ $ID = get_the_ID();
 
     <!-- Services -->
     <div class="services-container">
+        <div class="enc">
+            <div class="left"></div>
+            <div class="right">
+            <p>
+                Servicios
+            </p>
+            <div class="dec"></div>
+            </div>
+        </div>
+
+
+
+        <?php
+            $ind = 0;
+            $args = array( 'post_type' => 'servicio', 'post_status' => 'publish', 'posts_per_page' => 10, 'orderby'=>'fecha', 'order'=>'ASC');
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+            ?>
+
+        <a class="item" href="http://localhost:8888/gnsys/servicios/?serv=<?php echo $ind; ?>">
+            <div class="content">
+                <img src="<?php the_field('icon');  ?>" alt="" class="icon">
+                <p class="title">
+                    <?php the_title(); ?>
+                </p>
+            </div>
+
+            <div class="hidden-content">
+                <p><?php the_field('descripcion_corta');  ?></p>
+                <div class="bottom">
+                    <span class="title">
+                        <?php the_title(); ?>
+                    </span>
+                    <img src="<?php the_field('icon');  ?>" alt="" class="icon">
+                </div>
+            </div>
+
+            <div class="blop"></div>
+        </a>
+
+            <?php
+            $ind++;
+            endwhile;
+        ?>
+
+
+        <!--
         <div class="item">
             <div class="content">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-message.png' ?>" alt="" class="icon">
@@ -232,21 +345,24 @@ $ID = get_the_ID();
             <div class="blop"></div>
 
         </div>
-        
+-->
     </div>
     <!-- Services -->
 
-    <!-- Our Clients -->
+    <!-- Our Clients data-900="top: 50%;" data-1600="top: -20%;" -->
     <div class="our-clients-container">
+        <img src="<?php echo get_template_directory_uri().'/img/lineas-izq.png'?>" alt="" class="dec" style="top: -20%;">
         <div class="container">
             <div class="column">
-                <p>Nuestro objetivo es brindar <br> servicios que se ajusten a tus <br> necesidades y las de tu empresa.</p>
-                <p>Nuestra amplia experiencia en la <br> industria nos ha permitido enfocar <br>nuestros servicios en sectores como: </p>
+                <?php echo $informacion_clientes['descripcion']; ?>
                 <div class="subcontent">
+                    <?php echo $informacion_clientes['lista_items']; ?>
+
+                    <!--
                     <div class="subcolumn">
                         <ul>
                             <li>Educación </li>
-                            <li>Health</li>
+                            <li>Salud</li>
                             <li>Finanzas</li>
                         </ul>
                     </div>
@@ -257,6 +373,7 @@ $ID = get_the_ID();
                             <li>Manufactura</li>
                         </ul>
                     </div>
+                    -->
                 </div>
             </div>
             <div class="column">
@@ -345,18 +462,19 @@ $ID = get_the_ID();
     <!-- Our Clients -->
     <div class="advisors-container">
         <div class="container">
-            <div class="title">Contacta a Nuestros Asesores Técnicos</div>
+            <div class="title"><?php echo $clientes_seccion_azul['titulo']; ?></div>			
             <hr>
-            <p>Agenda una cita para realizar una demostración y presentación de la funcionalidad <br> y versatilidad de el amplio abanico de soluciones que manejamos.</p>
+            <p><?php echo $clientes_seccion_azul['descripcion']; ?></p>
             <br>
             <br>
-            <p class="tag">INTELLG<strong>E</strong>NCEVOLVED</p>
+            <p class="tag">INTELLGENC<strong>E</strong>VOLVED</p>
         </div>
     </div>
     <!-- Our Clients -->
 
     <!-- Contacto -->
     <div class="contact-container">
+        <img class="dec" src="<?php echo get_template_directory_uri().'/img/lineas-der.png'?>" alt="" style="bottom: 70%;">
         <div class="container">
             <div class="column">
                 <div>
@@ -369,6 +487,9 @@ $ID = get_the_ID();
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">
+                <?php echo do_shortcode('[contact-form-7 id="90" title="Principal"]'); ?>
+
+                <!--
                 <div>
                     <div class="form">
                         <div class="form-control">
@@ -388,6 +509,7 @@ $ID = get_the_ID();
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
     </div>
@@ -395,12 +517,15 @@ $ID = get_the_ID();
     <script>
 
         $('.owl-carousel').owlCarousel({
-            loop:false,
+            loop:true,
             margin:10,
             nav:false,
-            items: 1
+            items: 1,
+            autoplay:true,
+            autoplayTimeout:5000
         });
     
     </script>
+    
     <!-- Contacto -->
     <?php get_footer(); ?>

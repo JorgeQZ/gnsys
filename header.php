@@ -14,9 +14,9 @@
     <header class="<?php if ( is_user_logged_in() ) { echo 'header-border-top'; } ?>">
         <div class="container">
             <div class="logo">
-                <a href="#">
+                <a href="http://akevia.mx/gnsys/inicio/">
                     <img src="<?php echo get_template_directory_uri().'/img/header-logo.png' ?>" alt="Logo GNSYS" class="header-logo">
-                    <img src="<?php echo get_template_directory_uri().'/img/header-logo-color.png' ?>" alt="Logo GNSYS" class="header-logo-color">
+                    <img src="<?php echo get_template_directory_uri().'/img/header-logo-color2.png' ?>" alt="Logo GNSYS" class="header-logo-color">
                 </a>
             </div>
 

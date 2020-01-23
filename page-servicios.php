@@ -6,6 +6,54 @@
 ?>
 <?php get_header();?>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<style>
+
+.contenedor-general-servicios .cont-slogan, .contenedor-general-servicios .cont-slider-servicios, .contenedor-general-servicios .contenedor-servicio .item-servicio, .contact-container .container .column, img.dec, .banner .banner-title{
+    opacity: 0;
+}
+
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.contact-container .container .column:nth-child(1), .contact-container .container .column:nth-child(2)').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-general-servicios .cont-slogan, .contenedor-general-servicios .cont-slider-servicios, .contenedor-general-servicios .contenedor-servicio .item-servicio').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.banner .banner-title').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contact-container img.dec').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '60%',
+        triggerOnce: true
+    });
+
+});
+
+</script>
+
 <div class="banner" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="banner-title">
         <?php the_title() ?>
@@ -19,15 +67,14 @@
     <div class="cont-slogan">
         <p>
             Nuestras soluciones inteligentes están basadas en infraestructuras de hardware <br>
-            y software de alto valor. En Gnsys contamos con el mejor talento humano certificado, con gran experiencia en <br>
+            y software de alto valor. En Gnsys contamos con el mejor talento humano certificado y con gran experiencia para <br>
             brindarte un acompañamiento cercano y continuo.
         </p>
     </div>
 
 
-    <div class="cont-slider-servicios">
-
-        <div class="owl-carousel owl-theme">
+    <!-- Services -->
+    <div class="services-container">
 
         <?php
             $ind = 0;
@@ -36,48 +83,22 @@
             while ( $loop->have_posts() ) : $loop->the_post();
             ?>
 
-                        <div class="item <?php if($ind == 0) echo "active" ?>" target="<?php echo $ind;  ?>">
-                            <img src="<?php the_field('icono');  ?>" alt="">
-                            <p><?php the_title(); ?></p>
-                        </div>
+        <div class="item <?php if($ind == 0) echo "active" ?>" target="<?php echo $ind;  ?>">
+            <div class="content">
+                <img src="<?php the_field('icon');  ?>" alt="" class="icon">
+                <p class="title">
+                    <?php the_title(); ?>
+                </p>
+            </div>
+
+            <div class="blop"></div>
+        </div>
 
             <?php
             $ind++;
             endwhile;
         ?>
-
-
-<!--
-            <div class="item" target="0">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio1.png' ?>" alt="">
-                <p>Configuración de Alta Disponibilidad</p>
-            </div>
-            <div class="item" target="1">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio2.png' ?>" alt="">
-                <p>Dimensionamiento</p>
-            </div>
-            <div class="item active" target="2">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio3.png' ?>" alt="">
-                <p>Configuración <br> y puesta a punto </p>
-            </div>
-            <div class="item" target="3">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio4.png' ?>" alt="">
-                <p>Arquitectura <br> y diseño</p>
-            </div>
-            <div class="item" target="4">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio5.png' ?>" alt="">
-                <p>Consultoría</p>
-            </div>
-            <div class="item" target="4">
-                <img src="<?php echo get_template_directory_uri() . '/img/icon-servicio5.png' ?>" alt="">
-                <p>Consultoría</p>
-            </div>
--->
-
-        </div>
-
     </div>
-
 
     <div class="contenedor-servicio">
 
@@ -230,6 +251,7 @@
 
     <!-- Contacto -->
     <div class="contact-container">
+        <img class="dec" src="<?php echo get_template_directory_uri().'/img/lineas-der.png'?>" alt="" style="bottom: 70%;">
         <div class="container">
             <div class="column">
                 <div>
@@ -242,25 +264,7 @@
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">
-                <div>
-                    <div class="form">
-                        <div class="form-control">
-                            <label for="">Nombre</label><br>
-                            <input type="text" value="text">
-                        </div>
-                        <div class="form-control">
-                            <label for="">Email</label><br>
-                            <input type="text" value="text">
-                        </div>
-                        <div class="form-control">
-                            <label for="">Mensaje</label><br>
-                            <textarea>Mensaje</textarea>
-                        </div>
-                        <div class="form-control-submit">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </div>
-                </div>
+                <?php echo do_shortcode('[contact-form-7 id="90" title="Principal"]'); ?>
             </div>
         </div>
     </div>
@@ -272,6 +276,7 @@
 
 <script>
 
+/*
 $('.owl-carousel').owlCarousel({
     loop:false,
     nav:true,
@@ -289,27 +294,87 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-
+*/
 
 $(document).ready(function() {
 
-    $(".cont-slider-servicios .item").click(function(){
-        var aux = $(this).attr("target");
-        $(".cont-slider-servicios .item").each(function(index){
-            $(this).removeClass("active");
-        });
-        $(this).addClass("active");
-
-        $(".contenedor-servicio .item-servicio").each(function(index){
-            if($(this).attr("target") == aux)
-            {
-                $(this).addClass("active");
-            }
-            else{
-                $(this).removeClass("active");
-            }
-        });
+$(".services-container .item").click(function(){
+    var aux = $(this).attr("target");
+    $(".services-container .item").each(function(index){
+        $(this).removeClass("active");
     });
+    $(this).addClass("active");
+
+    $(".contenedor-servicio .item-servicio").each(function(index){
+        if($(this).attr("target") == aux)
+        {
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+
+    if ($(window).width() >= 768) {
+        $('html, body').animate({
+            scrollTop: $(".services-container").offset().top
+        }, 1000);        
+    }
+    else {
+        $('html, body').animate({
+            scrollTop: $(".contenedor-servicio .item-servicio.active p.tit").offset().top
+        }, 1000);   
+    }
+    
+});
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+var tech = getUrlParameter('serv');
+
+
+if(tech){
+    $(".services-container .item").each(function(index){
+        if(index == tech){
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+    $(".contenedor-servicio .item-servicio").each(function(index){
+        if(index == tech)
+        {
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+
+    if ($(window).width() >= 768) {
+        $('html, body').animate({
+            scrollTop: $(".services-container").offset().top
+        }, 1000);        
+    }
+    else {
+        $('html, body').animate({
+            scrollTop: $(".contenedor-servicio .item-servicio.active p.tit").offset().top
+        }, 1000);   
+    }
+}
 
 
 });

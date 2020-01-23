@@ -7,7 +7,7 @@ function gnsys_scripts() {
     wp_enqueue_style('page', get_template_directory_uri() . '/css/page.css');
     wp_enqueue_style('owl-slider', get_template_directory_uri() . '/css/owl.carousel.min.css');
     wp_enqueue_style('owl-theme', get_template_directory_uri() . '/css/owl.theme.default.min.css');
-
+    wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.css');
 
     if(is_page_template('page-servicios.php')){
         wp_enqueue_style('servicios', get_template_directory_uri() . '/css/servicios.css', null, false);
@@ -20,6 +20,11 @@ function gnsys_scripts() {
     wp_enqueue_script( 'JQuery', "https://code.jquery.com/jquery-3.4.1.min.js", array(), false );
     wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js',array(), false);
     wp_enqueue_script('owl-slider-js', get_template_directory_uri() . '/js/owl.carousel.min.js',array(), false);
+
+    if(!is_page_template('page-servicios.php') && !is_page_template('page-infraestructura.php')){
+      wp_enqueue_script( 'jquery-1', "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", array( 'jquery' ) );
+      wp_enqueue_script( 'waypoints', "https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js", array( 'jquery' ) ); 
+    }
 }
 add_action( 'wp_enqueue_scripts', 'gnsys_scripts' );  
 

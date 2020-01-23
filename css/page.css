@@ -18,7 +18,7 @@
 .banner .banner-title {
   color: white;
   position: relative;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -65,10 +65,12 @@
   .about-us-tabs .buttons-container .button-item img {
     width: 50%;
     margin-top: 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
   .about-us-tabs .buttons-container .button-item p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 0px;
     font-weight: bold;
@@ -84,6 +86,9 @@
     bottom: -10px;
     left: calc(50% - 40px);
     background-color: #0099ff;
+  }
+  .about-us-tabs .buttons-container .button-item:hover img {
+    width: 50%;
   }
   .about-us-tabs .about-us-tab-content {
     min-height: 65vh;
@@ -117,12 +122,12 @@
   }
   .about-us-tabs .about-us-tab-content .about-us-tab .title {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 32px;
     color: #0099ff;
   }
   .about-us-tabs .about-us-tab-content .about-us-tab .content {
     width: 90%;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 40px;
     font-weight: 300;
     padding: 0;
@@ -160,11 +165,11 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     color: #0099ff;
   }
   .about-us-experience-container .row .col:last-child p {
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
   }
   .about-us-experience-container .row.inverted .col:first-child {
@@ -218,7 +223,7 @@
   }
   .about-us-tabs .buttons-container .button-item p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 0px;
     font-weight: bold;
@@ -267,13 +272,13 @@
   }
   .about-us-tabs .about-us-tab-content .about-us-tab .title {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 32px;
     color: #0099ff;
   }
   .about-us-tabs .about-us-tab-content .about-us-tab .content {
-    width: 70%;
-    font-size: 35px;
-    line-height: 60px;
+    width: 60%;
+    font-size: 18px;
+    line-height: 40px;
     font-weight: 300;
     padding: 0;
     padding-left: 10px;
@@ -319,14 +324,14 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     color: #0099ff;
   }
   .about-us-experience-container .row .col:last-child {
     width: 70%;
   }
   .about-us-experience-container .row .col:last-child p {
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
   }
   .about-us-experience-container .row.inverted .col:first-child {
@@ -394,6 +399,7 @@
       -ms-flex: 1 0 33%;
           flex: 1 0 33%;
   padding: 0.1rem;
+  font-size: 16px;
 }
 
 .contact-page-container .column .grid .col a {
@@ -426,8 +432,8 @@
 .contact-page-container .column .form .form-row textarea {
   padding: 10px;
   border: none;
-  font-size: 15px;
-  width: 380px;
+  font-size: 16px;
+  width: 430px;
   height: 100px;
   margin: 0;
 }
@@ -437,7 +443,7 @@
   color: white;
   width: auto;
   height: auto;
-  font-size: 12px;
+  font-size: 15px;
   padding: 15px 40px;
   margin: 0;
   border: 1px solid #008cde;
@@ -478,11 +484,29 @@
   .banner {
     height: 515px;
   }
+  .about-us-tabs .about-us-tab-content .about-us-tab .title {
+    font-size: 45px;
+  }
+  .about-us-tabs .about-us-tab-content .about-us-tab .content {
+    font-size: 26px;
+  }
+  .about-us-experience-container .row .col:first-child p {
+    font-size: 35px;
+  }
+  .about-us-experience-container .row .col:last-child p {
+    font-size: 26px;
+  }
 }
 
 @media screen and (min-width: 1700px) {
   .banner {
     height: 615px;
+  }
+  .about-us-tab-content .about-us-tab .content {
+    width: 70%;
+    /*
+                font-size: 35px;
+                */
   }
 }
 
@@ -491,7 +515,22 @@
     height: 415px;
   }
   .banner .banner-title {
-    font-size: 28px;
+    font-size: 35px;
+  }
+  .about-us-tabs .about-us-tab-content .about-us-tab .title {
+    font-size: 45px;
+  }
+  .about-us-tabs .about-us-tab-content .about-us-tab .content {
+    font-size: 26px;
+  }
+  .about-us-experience-container .row .col:first-child p {
+    font-size: 35px;
+  }
+  .about-us-experience-container .row .col:last-child p {
+    font-size: 26px;
+  }
+  .contact-page-container .column {
+    padding: 27px;
   }
 }
 
@@ -501,7 +540,7 @@
     padding: 20px 35px;
   }
   .banner .banner-title {
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 
@@ -511,6 +550,6 @@
     padding: 20px 35px;
   }
   .banner .banner-title {
-    font-size: 28px;
+    font-size: 25px;
   }
 }
