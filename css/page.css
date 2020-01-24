@@ -161,16 +161,25 @@
     background-position: center;
     background-size: cover;
   }
-  .about-us-experience-container .row .col:first-child p {
+  .about-us-experience-container .row .col:nth-child(2n-1) p {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 25px;
     color: #0099ff;
   }
-  .about-us-experience-container .row .col:last-child p {
+  .about-us-experience-container .row .col:nth-child(2n) p {
     font-size: 18px;
     color: #fff;
+  }
+  .about-us-experience-container .row .col:nth-child(4n) {
+    background-image: url("../img/que-hacemos-bg.jpg");
+  }
+  .about-us-experience-container .row .col:nth-child(4n) p {
+    color: #313131;
+  }
+  .about-us-experience-container .row .col:nth-child(4n-2) {
+    background-image: url("../img/experience-bg.jpg");
   }
   .about-us-experience-container .row.inverted .col:first-child {
     background-color: #0099ff;
@@ -300,7 +309,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 50vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .about-us-experience-container .row .col {
     height: 50vh;
@@ -317,22 +327,31 @@
     background-position: center;
     background-size: cover;
   }
-  .about-us-experience-container .row .col:first-child {
+  .about-us-experience-container .row .col:nth-child(2n-1) {
     width: 30%;
   }
-  .about-us-experience-container .row .col:first-child p {
+  .about-us-experience-container .row .col:nth-child(2n-1) p {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 25px;
     color: #0099ff;
   }
-  .about-us-experience-container .row .col:last-child {
+  .about-us-experience-container .row .col:nth-child(2n) {
     width: 70%;
   }
-  .about-us-experience-container .row .col:last-child p {
-    font-size: 18px;
+  .about-us-experience-container .row .col:nth-child(2n) p {
     color: #fff;
+    font-size: 18px;
+  }
+  .about-us-experience-container .row .col:nth-child(4n) p {
+    color: #313131;
+  }
+  .about-us-experience-container .row .col:nth-child(4n-1) {
+    background-color: #0099ff;
+  }
+  .about-us-experience-container .row .col:nth-child(4n-1) p {
+    color: white;
   }
   .about-us-experience-container .row.inverted .col:first-child {
     background-color: #0099ff;
@@ -413,6 +432,14 @@
   color: #0099ff;
 }
 
+.contact-page-container .column .grid .col .textwidget {
+  margin: 15px 0;
+}
+
+.contact-page-container .column .grid .col .textwidget p {
+  margin: 0;
+}
+
 .contact-page-container .column .form .form-row {
   margin: 20px 0px;
 }
@@ -490,10 +517,10 @@
   .about-us-tabs .about-us-tab-content .about-us-tab .content {
     font-size: 26px;
   }
-  .about-us-experience-container .row .col:first-child p {
+  .about-us-experience-container .row .col:nth-child(2n-1) p {
     font-size: 35px;
   }
-  .about-us-experience-container .row .col:last-child p {
+  .about-us-experience-container .row .col:nth-child(2n) p {
     font-size: 26px;
   }
 }
@@ -523,10 +550,10 @@
   .about-us-tabs .about-us-tab-content .about-us-tab .content {
     font-size: 26px;
   }
-  .about-us-experience-container .row .col:first-child p {
+  .about-us-experience-container .row .col:nth-child(2n-1) p {
     font-size: 35px;
   }
-  .about-us-experience-container .row .col:last-child p {
+  .about-us-experience-container .row .col:nth-child(2n) p {
     font-size: 26px;
   }
   .contact-page-container .column {

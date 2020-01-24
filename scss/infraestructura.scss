@@ -19,10 +19,18 @@
         display: flex;
         .cont-logos{
             width: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
             img{
                 width: 40%;
-                margin: 60px auto;
+                margin: 0 auto;
+                margin-top: 60px;
                 display: block;
+                &:last-child{
+                    margin-bottom: 60px;
+                }
             }
         }
 
@@ -42,7 +50,7 @@
                 font-family: 'Amelia-Basic';
                 font-weight: 100;
                 color: white;
-                margin: 0;
+                margin: 20px 0;
             }
         }
     }
@@ -81,6 +89,7 @@
 
         .cont-servidores{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center; 
             margin-top: 50px;
@@ -88,6 +97,12 @@
             img{
                 height: 80px;
                 margin: 0 40px;
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -173,14 +188,14 @@
                 margin: 0 auto;
                 display: block;
             }
-            &:nth-child(1), &:nth-child(4){
+            &:nth-child(4n), &:nth-child(4n-3){
                 background: #0099f3;
                 p.desc{
                     padding-left: 15px;
                 }
             }
 
-            &:nth-child(2), &:nth-child(3){
+            &:nth-child(4n-2), &:nth-child(4n-1){
                 p.enc{
                     color: #0099f3;
                     &::before{
@@ -236,6 +251,11 @@
             p.subtit{
                 font-size: 32px;
             }
+            .cont-servidores{
+                img{
+                    margin: 0 20px;
+                }
+            }
         }
 
         .contenedor-general-info-servidores{
@@ -283,9 +303,10 @@
                 font-size: 32px;
             }
             .cont-servidores{
+                justify-content: space-evenly;
                 img{
-                    height: 45px;
-                    margin: 0 5px;
+                    height: 50px;
+                    margin: 0 15px;
                 }
             }
         }

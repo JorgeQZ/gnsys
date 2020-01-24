@@ -66,9 +66,7 @@ var $j = jQuery.noConflict();
 
     <div class="cont-slogan">
         <p>
-            Nuestras soluciones inteligentes están basadas en infraestructuras de hardware <br>
-            y software de alto valor. En Gnsys contamos con el mejor talento humano certificado y con gran experiencia para <br>
-            brindarte un acompañamiento cercano y continuo.
+            <?php the_field("descripcion_principal"); ?>
         </p>
     </div>
 
@@ -255,12 +253,11 @@ var $j = jQuery.noConflict();
         <div class="container">
             <div class="column">
                 <div>
-                    <p>
-                        Somos los expertos que <br> lideran tu viaje digital.
-                    </p>
-                    <p>
-                        Prepárese para acelerar las <br> soluciones de la era digital <br> de su empresa.
-                    </p>
+                    <?php
+                        if(is_active_sidebar('descripcion-contacto')){
+                            dynamic_sidebar('descripcion-contacto');
+                        }
+                    ?>
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">

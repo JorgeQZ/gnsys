@@ -38,8 +38,49 @@ if ( ! function_exists( 'gnsys_menus' ) ) {
     add_action( 'after_setup_theme', 'gnsys_menus', 0 );
 }
 
+// Widgets
+function gnsys_widgets_init(){
+
+    register_sidebar( array(
+      'name'			=> 'Dirección',
+      'id'			=> 'direccion',
+      'before_widget'	=> 	'',
+      'after-widget'	=> ''
+      ));
+
+      register_sidebar( array(
+        'name'			=> 'Teléfono',
+        'id'			=> 'telefono',
+        'before_widget'	=> 	'',
+        'after-widget'	=> ''
+        ));
+
+    register_sidebar( array(
+      'name'			=> 'Email',
+      'id'			=> 'email',
+      'before_widget'	=> 	'',
+      'after-widget'	=> ''
+      ));
+
+      register_sidebar( array(
+        'name'			=> 'Redes Sociales',
+        'id'			=> 'redes',
+        'before_widget'	=> 	'',
+        'after-widget'	=> ''
+        ));
+
+      register_sidebar( array(
+        'name'			=> 'Descripción Contacto',
+        'id'			=> 'descripcion-contacto',
+        'before_widget'	=> 	'',
+        'after-widget'	=> ''
+        ));
+
+}
+add_action('init', 'gnsys_widgets_init');
+
+
 add_action( 'init', 'gnsys_post_type_servicios' );
- 
 function gnsys_post_type_servicios() {
  
   $labels = array(

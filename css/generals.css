@@ -829,9 +829,19 @@ body {
   footer .content .column a:hover {
     opacity: .7;
   }
+  footer .content .column a img {
+    max-width: 40px !important;
+    margin-right: 10px;
+  }
   footer .content .column p {
     font-size: 1.2rem;
     line-height: 1.2;
+  }
+  footer .content .column .cont-widget {
+    margin: 15px 0;
+  }
+  footer .content .column .cont-widget p {
+    margin: 0;
   }
   footer .content .column .footer-menu {
     font-size: 15px;
@@ -1503,6 +1513,10 @@ body {
     text-decoration: none;
     color: white;
   }
+  footer .content .column a img {
+    max-width: 30px !important;
+    margin-right: 10px;
+  }
   footer .content .column p {
     font-size: 15px;
     line-height: 1.2;
@@ -2005,6 +2019,10 @@ body {
   footer .content .column a {
     text-decoration: none;
     color: white;
+  }
+  footer .content .column a img {
+    max-width: 30px !important;
+    margin-right: 10px;
   }
   footer .content .column p {
     font-size: 15px;

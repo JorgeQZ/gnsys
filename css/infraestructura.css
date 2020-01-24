@@ -22,12 +22,30 @@
 
 .contenedor-general-infraestructura .contenedor-logos .cont-logos {
   width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contenedor-general-infraestructura .contenedor-logos .cont-logos img {
   width: 40%;
-  margin: 60px auto;
+  margin: 0 auto;
+  margin-top: 60px;
   display: block;
+}
+
+.contenedor-general-infraestructura .contenedor-logos .cont-logos img:last-child {
+  margin-bottom: 60px;
 }
 
 .contenedor-general-infraestructura .contenedor-logos .cont-info {
@@ -55,7 +73,7 @@
   font-family: 'Amelia-Basic';
   font-weight: 100;
   color: white;
-  margin: 0;
+  margin: 20px 0;
 }
 
 .contenedor-general-infraestructura .contenedor-general-servidores {
@@ -93,6 +111,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -106,6 +126,14 @@
 .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
   height: 80px;
   margin: 0 40px;
+}
+
+.contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img:first-child {
+  margin-left: 0;
+}
+
+.contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img:last-child {
+  margin-right: 0;
 }
 
 .contenedor-general-infraestructura .contenedor-general-desc-servidores {
@@ -200,27 +228,27 @@
   display: block;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4) {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-3) {
   background: #0099f3;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4) p.desc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-3) p.desc {
   padding-left: 15px;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-2) p.enc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1) p.enc {
   color: #0099f3;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.enc::before, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.enc::before {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-2) p.enc::before, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1) p.enc::before {
   background: #0099f3;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.tit {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-2) p.tit, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1) p.tit {
   color: #0099f3;
 }
 
-.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3) p.desc {
+.contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-2) p.desc, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1) p.desc {
   color: #313131;
 }
 
@@ -239,6 +267,9 @@
   }
   .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
     font-size: 32px;
+  }
+  .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
+    margin: 0 20px;
   }
   .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor {
     padding: 50px;
@@ -277,9 +308,14 @@
   .contenedor-general-infraestructura .contenedor-general-servidores p.subtit {
     font-size: 32px;
   }
+  .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
   .contenedor-general-infraestructura .contenedor-general-servidores .cont-servidores img {
-    height: 45px;
-    margin: 0 5px;
+    height: 50px;
+    margin: 0 15px;
   }
   .contenedor-general-infraestructura .contenedor-general-desc-servidores .cont-items {
     width: 75%;

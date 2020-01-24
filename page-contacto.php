@@ -57,25 +57,32 @@ var $j = jQuery.noConflict();
     </div>
     <div class="column" style="background-image: url(<?php echo get_template_directory_uri().'/img/contact-bg.jpg' ?>)">
         <p class="head-1 thin" style="max-width: 400px">
-            Prepárese para acelerar
-            las soluciones de la era digital de su empresa.
+            <?php the_field("encabezado_contacto"); ?>
         </p>
         <div class="grid">
             <div class="col">
                 <strong>Dirección</strong>
-                <p>
-                    Dr Angel Martinez Villarreal <br>
-                    #433 Col. Chepevera, <br>
-                    Monterrey, NL, Mexico
-                </p>
+                            <?php
+                                if(is_active_sidebar('direccion')){
+                                    dynamic_sidebar('direccion');
+                                }
+                            ?>
             </div>
             <div class="col">
                 <strong>Email</strong>
-                <p><a href="mailto:ventas@gnsys.com.mx">ventas@gnsys.com.mx</a></p>
+                            <?php
+                                if(is_active_sidebar('email')){
+                                    dynamic_sidebar('email');
+                                }
+                            ?>
             </div>
             <div class="col">
                 <strong>Teléfono</strong>
-                <p><a href="mailto:+1 81 8347 7640">+1 81 8347 7640</a></p>
+                            <?php
+                                if(is_active_sidebar('telefono')){
+                                    dynamic_sidebar('telefono');
+                                }
+                            ?>
             </div>
         </div>
         

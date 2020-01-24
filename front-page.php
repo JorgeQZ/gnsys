@@ -478,12 +478,20 @@ var $j = jQuery.noConflict();
         <div class="container">
             <div class="column">
                 <div>
+
+                <?php
+                    if(is_active_sidebar('descripcion-contacto')){
+                        dynamic_sidebar('descripcion-contacto');
+                    }
+                ?>
+                    <!--
                     <p>
                         Somos los expertos que <br> lideran tu viaje digital.
                     </p>
                     <p>
                         Prepárese para acelerar las <br> soluciones de la era digital <br> de su empresa.
                     </p>
+                -->
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">

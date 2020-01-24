@@ -135,7 +135,7 @@
                 padding: 30px;
                 background-position: center;
                 background-size: cover;
-                &:first-child {
+                &:nth-child(2n-1) {
                     // width: 30%;
                     p {
                         text-align: center;
@@ -145,13 +145,24 @@
                         color: #0099ff;
                     }
                 }
-                &:last-child {
+                &:nth-child(2n) {
                     // width: 70%;
                     p {
                         font-size: 18px;
                         color: #fff;
                     }
                 }
+                &:nth-child(4n) {
+                    background-image: url("../img/que-hacemos-bg.jpg");
+                    p {
+                        color: #313131;
+                    }
+                }
+
+                &:nth-child(4n-2) {
+                    background-image: url("../img/experience-bg.jpg");
+                }
+                
             }
             &.inverted {
                 .col {
@@ -267,7 +278,7 @@
     .about-us-experience-container {
         .row {
             display: flex;
-            height: 50vh;
+            flex-wrap: wrap;
             .col {
                 height: 50vh;
                 display: flex;
@@ -276,7 +287,7 @@
                 padding: 0px 70px;
                 background-position: center;
                 background-size: cover;
-                &:first-child {
+                &:nth-child(2n-1) {
                     width: 30%;
                     p {
                         text-align: center;
@@ -286,11 +297,22 @@
                         color: #0099ff;
                     }
                 }
-                &:last-child {
+                &:nth-child(2n) {
                     width: 70%;
                     p {
-                        font-size: 18px;
                         color: #fff;
+                        font-size: 18px;
+                    }
+                }
+                &:nth-child(4n) {
+                    p {
+                        color: #313131;
+                    }
+                }
+                &:nth-child(4n-1) {
+                    background-color: #0099ff;
+                    p {
+                        color: white;
                     }
                 }
             }
@@ -347,6 +369,12 @@
                     transition: 0.1s ease;
                     &:hover {
                         color: #0099ff;
+                    }
+                }
+                .textwidget{
+                    margin: 15px 0;
+                    p{
+                        margin: 0;
                     }
                 }
             }
@@ -441,12 +469,12 @@
 
     .about-us-experience-container{ 
         .row{ 
-            .col:first-child{
+            .col:nth-child(2n-1){
                 p{
                     font-size: 35px;
                 }
             }
-            .col:last-child{
+            .col:nth-child(2n){
                 p{
                     font-size: 26px;
                 }
@@ -497,12 +525,12 @@
 
     .about-us-experience-container{ 
         .row{ 
-            .col:first-child{
+            .col:nth-child(2n-1){
                 p{
                     font-size: 35px;
                 }
             }
-            .col:last-child{
+            .col:nth-child(2n){
                 p{
                     font-size: 26px;
                 }

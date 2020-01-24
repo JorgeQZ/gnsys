@@ -757,11 +757,24 @@ body {
                     &:hover{
                         opacity: .7;
                     }
+                    img {
+                        max-width: 40px !important;
+                        margin-right: 10px;
+                    }
                 }
                 p {
                     font-size: 1.2rem;
                     line-height: 1.2;
                 }
+
+                .cont-widget{
+                    margin: 15px 0;
+                    p{
+                        margin: 0;
+                    }
+                }
+
+
                 .footer-menu {
                     font-size: 15px;
                     ul {
@@ -1353,6 +1366,10 @@ body {
                 a {
                     text-decoration: none;
                     color: white;
+                    img {
+                        max-width: 30px !important;
+                        margin-right: 10px;
+                    }
                 }
                 p {
                     font-size: 15px;
@@ -1760,6 +1777,10 @@ body {
                 a {
                     text-decoration: none;
                     color: white;
+                    img{
+                        max-width: 30px !important;
+                        margin-right: 10px;
+                    }
                 }
                 p {
                     font-size: 15px;

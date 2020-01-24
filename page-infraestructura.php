@@ -4,7 +4,12 @@
  *
  */
 ?>
-<?php get_header();?>
+<?php get_header();
+$seccion_1 = get_field('seccion_1');	
+$seccion_2 = get_field('seccion_2');	
+$seccion_3 = get_field('seccion_3');	
+$seccion_4 = get_field('seccion_4');	
+?>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -35,14 +40,14 @@ var $j = jQuery.noConflict();
         triggerOnce: true
     });
 
-	$j('.contenedor-general-infraestructura .contenedor-logos .cont-logos img, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(1), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(3), .banner .banner-title').waypoint(function() {
+	$j('.contenedor-general-infraestructura .contenedor-logos .cont-logos img, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-3), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1), .banner .banner-title').waypoint(function() {
         $j(this).toggleClass('fadeInLeft animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
-    $j('.contenedor-general-infraestructura .contenedor-logos .cont-info p, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(2), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4)').waypoint(function() {
+    $j('.contenedor-general-infraestructura .contenedor-logos .cont-info p, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-2), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n)').waypoint(function() {
         $j(this).toggleClass('fadeInRight animated');
     }, {
         offset: '75%',
@@ -82,29 +87,21 @@ var $j = jQuery.noConflict();
 
 
         <div class="cont-logos">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-ibm.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-lenovo.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-huawei.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-dell.png' ?>" alt="">
+            <?php
+                if( have_rows('seccion_1') ): while ( have_rows('seccion_1') ) : the_row(); 
+                    if( have_rows('logos') ): while ( have_rows('logos') ) : the_row();       
+                        ?>
+                            <img src="<?php echo get_sub_field('logo'); ?>" alt="">
+                        <?php
+                    endwhile; endif;
+                endwhile; endif;
+            ?>
         </div>
 
         <div class="cont-info">
-            <p>
-                Nuestra infraestructura está basada en tecnologías de punta del mercado, 
-                permitiéndonos ofrecer soluciones enfocadas a contribuir con la 
-                optimización de las operaciones de nuestros clientes.
-            </p>
-            <p>
-                Ofreciendo servicios de venta de equipos, 
-                servicios de asesoría y soporte, análisis de requerimientos 
-                y dimensionamiento de infraestructura central, consolidación y virtualización de servicios (aplicaciones) 
-                en diferentes plataformas operativas.
-            </p>
-            <p>
-                Desde la venta de soluciones para su implementación en sitio como los servicios de 
-                integración de nubes públicas, híbridas y privadas
-                a la infraestructura de nuestros clientes.
-            </p>
+
+            <?php echo $seccion_1['descripcion']; ?>
+
         </div>
 
     </div>
@@ -115,19 +112,24 @@ var $j = jQuery.noConflict();
     <div class="contenedor-general-servidores">
 
         <p class="tit">
-            Servidores
+            <?php echo $seccion_2['encabezado']; ?>
         </p>
 
         <p class="subtit">
-            Como parte de los productos <br>
-            que ofrecemos están:
+            <?php echo $seccion_2['descripcion']; ?>
+
         </p>
 
         <div class="cont-servidores">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-vmware.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-linux.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-windows.png' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/img/logo-aix.png' ?>" alt="">
+            <?php
+                if( have_rows('seccion_2') ): while ( have_rows('seccion_2') ) : the_row(); 
+                    if( have_rows('logos') ): while ( have_rows('logos') ) : the_row();       
+                        ?>
+                            <img src="<?php echo get_sub_field('logo'); ?>" alt="">
+                        <?php
+                    endwhile; endif;
+                endwhile; endif;
+            ?>
         </div>
 
     </div>
@@ -136,11 +138,7 @@ var $j = jQuery.noConflict();
     <div class="contenedor-general-desc-servidores">
 
         <div class="cont-items">
-            <p> <span>- IBM Cognitive Systems</span> (Power, Linux, LinuxOne, AIX, IBMi)</p>
-            <p> <span>- Plataforma Intel x86:</span> Lenovo DataCenter Solutions, Huawei, Dell</p>
-            <p> <span>- Hiperconvergencia:</span> Nutanix en POWER e Intel x86 (Lenovo y Huawei). VMware vSan en plataforma x86.</p>
-            <p> <span>- Virtualización y consolidación:</span> VMware en plataforma x86. Power VM en IBM Power Systems. KVM en Power y x86. zVM en LinuxOne.</p>
-            <p> <span>- Clusters para Machine Learning, Deep Learning, High Performance Computing, y Artificial Intelligence con Power AI Spectrum Computing</span></p>
+            <?php echo $seccion_3['items']; ?>
         </div>
 
 
@@ -149,6 +147,32 @@ var $j = jQuery.noConflict();
 
     <div class="contenedor-general-info-servidores">
 
+            <?php
+                if( have_rows('seccion_4') ): while ( have_rows('seccion_4') ) : the_row(); 
+                    if( have_rows('items') ): while ( have_rows('items') ) : the_row();       
+                        ?>
+                            <div class="cont-servidor">
+                                <?php if(get_sub_field('encabezado')){ ?>
+                                <p class="enc">
+                                    <?php echo get_sub_field('encabezado'); ?>
+                                </p>
+                                <p class="tit">
+                                    <?php echo get_sub_field('titulo'); ?>
+                                </p>
+                                <p class="desc">
+                                    <?php echo get_sub_field('descripcion'); ?>
+                                </p>
+                                <?php }else{ ?>
+                                    <img src="<?php echo get_sub_field('imagen'); ?>" alt="">
+                                <?php } ?>
+
+                            </div>
+                        <?php
+                    endwhile; endif;
+                endwhile; endif;
+            ?>
+
+<!--
         <div class="cont-servidor">
             <p class="enc">
                 Almacenamiento
@@ -213,6 +237,7 @@ var $j = jQuery.noConflict();
                 IBM Spectrum NAS
             </p>
         </div>
+            -->
     
     </div>
 
@@ -223,12 +248,11 @@ var $j = jQuery.noConflict();
         <div class="container">
             <div class="column">
                 <div>
-                    <p>
-                        Somos los expertos que <br> lideran tu viaje digital.
-                    </p>
-                    <p>
-                        Prepárese para acelerar las <br> soluciones de la era digital <br> de su empresa.
-                    </p>
+                    <?php
+                        if(is_active_sidebar('descripcion-contacto')){
+                            dynamic_sidebar('descripcion-contacto');
+                        }
+                    ?>
                 </div>
             </div>
             <div class="column" style="justify-content: flex-end;">

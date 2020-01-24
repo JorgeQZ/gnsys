@@ -54,12 +54,30 @@
                 <div class="row">
                     <div class="column">
                         <img src="<?php echo get_template_directory_uri().'/img/pin.png'?>" alt="" class="icon">
-                        <p><strong>Dirección</strong> <br> Dr. Angel Martinez Villarreal #433 <br> Col. Chepevera <br> Monterrey, NL, Mexico</p>
-
+                        <div class="cont-widget">
+                            <p>
+                                <strong>Dirección</strong>
+                            </p>
+                            <?php
+                                if(is_active_sidebar('direccion')){
+                                    dynamic_sidebar('direccion');
+                                }
+                            ?>
+                        </div>
                     </div>
                     <div class="column">
                         <img src="<?php echo get_template_directory_uri().'/img/phone.png'?>" alt="" class="icon">
-                        <p><strong>Teléfono</strong> <br><a href="mailto:+1 81 8347 7640">+1 81 8347 7640</a></p>
+                        <div class="cont-widget">
+                            <p>
+                            <strong>Teléfono</strong>
+                            </p>
+                            <?php
+                                if(is_active_sidebar('telefono')){
+                                    dynamic_sidebar('telefono');
+                                }
+                            ?>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -67,14 +85,24 @@
                 <div class="row">
                     <div class="column">
                         <img src="<?php echo get_template_directory_uri().'/img/email.png'?>" alt="" class="icon">
-                        <p><strong>Email</strong> <br>
-                            <a href="mailto:ventas@gnsys.com.mx">ventas@gnsys.com.mx</a>
-                        </p>
+                            <div class="cont-widget">
+                                <p>
+                                    <strong>Email</strong>
+                                </p>
+                                <?php
+                                if(is_active_sidebar('email')){
+                                    dynamic_sidebar('email');
+                                }
+                                ?>
+                            </div>
                     </div>
                     <br>
                     <div class="column">
-                        <a href="#"><img src="<?php echo get_template_directory_uri().'/img/facebook.png' ?>" alt="" class="social-logo"></a>
-                        <a href="#"><img src="<?php echo get_template_directory_uri().'/img/linkedin.png' ?>" alt="" class="social-logo"></a>
+                            <?php
+                                if(is_active_sidebar('redes')){
+                                    dynamic_sidebar('redes');
+                                }
+                            ?>
                     </div>
                 </div>
             </div>
